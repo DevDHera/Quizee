@@ -1,14 +1,14 @@
 <?php
     // DB Params
-    define('DB_HOST', '_YOUR_HOST_');
-    define('DB_PORT', '_YOUR_PORT_');
-    define('DB_USER', '_YOUR_USER_');
-    define('DB_PASS', '_YOUR_PASSWORD_');
-    define('DB_NAME', '_YOUR_DB_NAME_');
+    define('DB_HOST', 'localhost');
+    define('DB_PORT', '3308');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+    define('DB_NAME', 'quizee');
 
     // App Root
     define('APPROOT', dirname(dirname(__FILE__)));
     // URL Root
-    define('URLROOT', '_YOUR_URL_');
+    define('URLROOT', 'http://localhost/quizee');
     // Site Name
-    define('SITENAME', '_YOUR_SITENAME_');
+    define('SITENAME', 'Quizee - CTS');

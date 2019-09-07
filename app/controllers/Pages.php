@@ -9,7 +9,7 @@
         public function index()
         {
             $data = [
-                'title' => 'TiNY PHP MVC'
+                'title' => 'Quizee'
             ];
             
             $this->view('pages/index', $data);
