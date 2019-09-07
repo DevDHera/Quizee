@@ -20,7 +20,7 @@
         {
             $data = [
                 'title' => 'About Us',
-                'description' => 'Quizee is the Employee Assesment Portal of Ceylon Textile Suppliers'
+                'description' => 'A simple quiz automation platform'
             ];
 
             $this->view('pages/about', $data);
