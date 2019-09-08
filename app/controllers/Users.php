@@ -186,7 +186,7 @@
             $_SESSION['user_email'] = $user->email;
             $_SESSION['user_name'] = $user->name;
             $_SESSION['user_role'] = $user->role;
-            redirect('pages/index');
+            redirect('quizzes');
         }
       
         public function logout()
@@ -199,14 +199,21 @@
             session_destroy();
             redirect('users/login');
         }
-      
-        public function isLoggedIn()
+
+        public function results()
         {
-            if (isset($_SESSION['user_id'])) {
-              return true;
+            if (isLoggedIn()) {
+                $results = $this->userModel->getResultsByUser($_SESSION['user_id']);
+
+                $data = [
+                    'results' => $results
+                ];
+
+                $this->view('users/result', $data);
             } else {
-              return false;
+                redirect('users/login');
             }
+            
         }
     }
     
