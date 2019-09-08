@@ -76,4 +76,25 @@
                 return false;
             }
         }
+        
+        // Get All results of User
+        public function getResultsByUser($userId)
+        {
+            $this->db->query('SELECT *,
+                            attempts.id as attemptId,
+                            users.id as userId
+                            FROM attempts
+                            INNER JOIN users
+                            ON attempts.user_id = users.id
+                            WHERE attempts.user_id=:user_id
+                            ORDER BY attempts.attempted_at ASC
+                            ');
+
+            // Bind value
+            $this->db->bind(':user_id', $userId);
+
+            $results = $this->db->resultSet();
+
+            return $results;
+        }
   }
