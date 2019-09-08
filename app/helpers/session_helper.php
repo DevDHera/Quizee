@@ -27,3 +27,30 @@
       }
     }
   }
+
+  function isLoggedIn()
+  {
+      if (isset($_SESSION['user_id'])) {
+        return true;
+      } else {
+        return false;
+      }
+  }
+  
+  function isAdmin()
+  {
+      if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'ADMIN') {
+        return true;
+      } else {
+        return false;
+      }
+  }
+
+  function _group_by($array, $key) 
+  {
+    $return = array();
+    foreach($array as $val) {
+        $return[$val[$key]][] = $val;
+    }
+    return $return;
+  }
