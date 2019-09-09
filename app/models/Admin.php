@@ -63,5 +63,21 @@
                 return false;
             }
         }
+
+        public function getAttempts()
+        {
+            $this->db->query('SELECT *,
+                            attempts.id as attemptId,
+                            users.id as userId
+                            FROM attempts
+                            INNER JOIN users
+                            ON attempts.user_id = users.id
+                            ORDER BY attempts.attempted_at DESC
+                            ');
+
+            $results = $this->db->resultSet();
+
+            return $results;
+        }
     }
     
