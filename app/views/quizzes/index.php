@@ -14,6 +14,7 @@
     </div>
     
     <?php flash('attempt_count_exceeded'); ?>
+    <?php flash('no_access'); ?>
     
     <?php foreach($data['quizzes'] as $quiz) : ?>
         <div class="card card-body mb-3">
