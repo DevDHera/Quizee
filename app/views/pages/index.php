@@ -96,30 +96,25 @@
 
     <hr>
 
-    <div class="card text-center border-0">
-  <!-- <div class="card-header">
-    Featured
-  </div> -->
-  <div class="card-body">
-    <h2 class="card-title">Our Partners</h2>
-    <div class="row mt-5">
-        <div class="col">
-            <img src="<?php echo URLROOT; ?>/img/partners/adi.png" class="img-fluid rounded">
-        </div>
-        <div class="col">
-            <img src="<?php echo URLROOT; ?>/img/partners/ck.png" class="img-fluid rounded">
-        </div>
-        <div class="col">
-            <img src="<?php echo URLROOT; ?>/img/partners/nike.png" class="img-fluid rounded">
-        </div>
-        <div class="col">
-            <img src="<?php echo URLROOT; ?>/img/partners/vs.png" class="img-fluid rounded">
-        </div>
+    <div class="card text-center border-0">  
+        <div class="card-body">
+            <h2 class="card-title">Our Partners</h2>
+            <div class="row mt-5">
+                <div class="col">
+                    <img src="<?php echo URLROOT; ?>/img/partners/adi.png" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="<?php echo URLROOT; ?>/img/partners/ck.png" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="<?php echo URLROOT; ?>/img/partners/nike.png" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="<?php echo URLROOT; ?>/img/partners/vs.png" class="img-fluid rounded">
+                </div>
+            </div>
     </div>
-  </div>
-  <!-- <div class="card-footer text-muted">
-    2 days ago
-  </div> -->
+    
 </div>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
