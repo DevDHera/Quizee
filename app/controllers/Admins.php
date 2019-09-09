@@ -4,8 +4,11 @@
     {
         public function __construct()
         {
-            if (!isLoggedIn() || !isAdmin()) {
+            if (!isLoggedIn()) {
                 redirect('users/login');
+            } elseif (!isAdmin()) {
+                flash('no_access', 'Access Forbidden');
+                redirect('quizzes');
             }
             $this->adminModel = $this->model('Admin');
             $this->userModel = $this->model('User');
@@ -126,6 +129,18 @@
             } else {
                 redirect('admins/users');
             }
+        }
+
+        public function attempts()
+        {
+            // Get Attempts
+            $attempts = $this->adminModel->getAttempts();
+        
+            $data = [
+                'attempts' => $attempts
+            ];
+
+            $this->view('admin/attempts', $data);
         }
     }
     
